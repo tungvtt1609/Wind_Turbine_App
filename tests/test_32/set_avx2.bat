@@ -1,0 +1,1 @@
+export MKL_CBWR = AVX2

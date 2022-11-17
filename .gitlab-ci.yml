@@ -1,0 +1,15 @@
+include:
+  project: 'OpenLAC/utils'
+  file: 'ci/control_dlls.yml'
+
+.build_release:
+    stage: build
+    artifacts:
+        paths:
+        - $BUILD_DIR/src/*/*.exe
+        - $BUILD_DIR/src/*/*.dll
+        - $BUILD_DIR/src/*/*.so
+        - $BUILD_DIR/src/*/PGOPTI.* # codecov files
+        expire_in: 1 week
+    script:
+    - python utils/ci/ci_utils.py "$RELEASE_CONF" cmake $COMPILER $BUILDER

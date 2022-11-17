@@ -1,0 +1,15 @@
+*.mod
+*.o
+*.so
+.*.swp
+__pycache__/
+*.pyc
+.pytest_cache
+/.project
+/.pydevproject
+/build
+/src/dtu_we_controller/Win32
+/src/dtu_we_controller_bladed/Win32
+/version.h
+build_vs17/
+build_DHI_vs17/
